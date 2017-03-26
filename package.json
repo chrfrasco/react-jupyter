@@ -1,7 +1,7 @@
 {
   "name": "react-jupyter",
-  "version": "0.0.2",
-  "main": "./dist/jupyter-react.js",
+  "version": "0.0.1",
+  "main": "./dist/react-jupyter.js",
   "private": false,
   "homepage": "http://eoinmurray.io/react-jupyter",
   "devDependencies": {
@@ -21,9 +21,7 @@
     "markdown-it": "^8.3.1",
     "markdown-it-mathjax": "^2.0.0",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "superagent": "^3.5.2",
-    "underscore": "^1.8.3"
+    "react-dom": "^15.4.2"
   },
   "scripts": {
     "start": "react-scripts start",
