@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Notebook from './Notebook'
 import './jupyter-default.css'
-import _ from 'underscore'
 
 
 const asyncLoadMathjax = () => {
