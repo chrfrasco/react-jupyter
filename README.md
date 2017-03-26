@@ -6,6 +6,10 @@
 npm install react-jupyter
 ```
 
+## Demo
+
+[https://eoinmurray.github.io/react-jupyter/](https://eoinmurray.github.io/react-jupyter/)
+
 ## Usage
 
 ```jsx

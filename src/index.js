@@ -28,7 +28,7 @@ class JuptyerRenderer extends Component {
   }
 
   render() {
-    const { notebook, defaultStyle = false, showCode = false } = this.props
+    const { notebook, defaultStyle = true, showCode = true } = this.props
 
     let cls = defaultStyle ? "jupyter-default" : "jupyter"
     if (showCode) cls += " showCode"
