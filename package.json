@@ -1,6 +1,6 @@
 {
   "name": "react-jupyter",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "./dist/react-jupyter.js",
   "private": false,
   "homepage": "http://eoinmurray.io/react-jupyter",
