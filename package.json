@@ -1,0 +1,35 @@
+{
+  "name": "react-jupyter",
+  "version": "0.0.2",
+  "main": "./dist/jupyter-react.js",
+  "private": false,
+  "homepage": "http://eoinmurray.io/react-jupyter",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "css-loader": "^0.27.3",
+    "gh-pages": "^0.12.0",
+    "raw-loader": "^0.5.1",
+    "react-scripts": "0.9.5",
+    "webpack": "^2.3.2"
+  },
+  "dependencies": {
+    "ansi_up": "^1.3.0",
+    "highlight.js": "^9.10.0",
+    "markdown-it": "^8.3.1",
+    "markdown-it-mathjax": "^2.0.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "superagent": "^3.5.2",
+    "underscore": "^1.8.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "webpack",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
+  }
+}
