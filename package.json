@@ -2,18 +2,23 @@
   "name": "website",
   "version": "0.0.1",
   "private": true,
+  "homepage": "https://eoinmurray.io/react-jupyter",
   "devDependencies": {
     "react-scripts": "0.9.5"
   },
   "dependencies": {
+    "gh-pages": "^0.12.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-jupyter": "^0.0.2"
+    "react-jupyter": "^0.0.5",
+    "superagent": "^3.5.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
