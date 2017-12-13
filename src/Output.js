@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
-import ansi_up from 'ansi_up'
+import AnsiUp from 'ansi_up'
 import DisplayData from './DisplayData'
 import DisplayError from './DisplayError'
 import Code from './Code'
@@ -34,6 +34,7 @@ class Output extends Component {
 
     if (raw.output_type === 'stream') {
       const text = joinText(raw.text)
+      const ansi_up = new AnsiUp();
       output = (
         <Code
           showCode={showCode}
