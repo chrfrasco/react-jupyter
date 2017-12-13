@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import Cell from './Cell'
 
 class Worksheet extends Component {
@@ -13,14 +13,17 @@ class Worksheet extends Component {
     const { raw, metadata, showCode } = this.props
 
     const cells = raw.cells.map((c, i) => {
-      return <Cell raw={c} key={`cell${i}`} showCode={showCode} metadata={metadata}/>
-    });
+      return (
+        <Cell
+          raw={c}
+          key={`cell${i}`}
+          showCode={showCode}
+          metadata={metadata}
+        />
+      )
+    })
 
-    return (
-      <div className="worksheet">
-        {cells}
-      </div>
-    )
+    return <div className="worksheet">{cells}</div>
   }
 }
 

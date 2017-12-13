@@ -5,12 +5,9 @@ import ansi_up from 'ansi_up'
 class DisplayError extends Component {
   render() {
     const { raw } = this.props
-    const text =raw.traceback.join("\n")
+    const text = raw.traceback.join('\n')
 
-    return <Code
-        className="pyerr"
-        string={ansi_up.ansi_to_html(text)}
-      />
+    return <Code className="pyerr" string={ansi_up.ansi_to_html(text)} />
   }
 }
 

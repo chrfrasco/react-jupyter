@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import highlight from 'highlight.js'
 import 'highlight.js/styles/github.css'
 
@@ -29,11 +29,15 @@ class Code extends Component {
   render() {
     const { string, className, language = '', showCode } = this.props
 
-    if (!showCode) return <div></div>
+    if (!showCode) return <div />
 
     return (
       <pre className={className} data-language={language}>
-        <code ref={c => {this._elem = c}}>
+        <code
+          ref={c => {
+            this._elem = c
+          }}
+        >
           {string}
         </code>
       </pre>

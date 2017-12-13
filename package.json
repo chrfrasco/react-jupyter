@@ -12,6 +12,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.7",
     "gh-pages": "^1.1.0",
+    "prettier": "^1.9.2",
     "raw-loader": "^0.5.1",
     "react-scripts": "1.0.17",
     "webpack": "^3.10.0"
