@@ -6,11 +6,12 @@ class Worksheet extends Component {
   static propTypes = {
     raw: PropTypes.object.isRequired,
     metadata: PropTypes.object.isRequired,
-    showCode: PropTypes.bool
+    showCode: PropTypes.bool,
+    showError: PropTypes.bool
   }
 
   render() {
-    const { raw, metadata, showCode } = this.props
+    const { raw, metadata, showCode, showError } = this.props
 
     const cells = raw.cells.map((c, i) => {
       return (
@@ -18,6 +19,7 @@ class Worksheet extends Component {
           raw={c}
           key={`cell${i}`}
           showCode={showCode}
+          showError={showError}
           metadata={metadata}
         />
       )

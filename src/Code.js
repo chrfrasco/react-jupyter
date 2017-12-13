@@ -27,7 +27,7 @@ class Code extends Component {
   }
 
   render() {
-    const { string, className, language = '', showCode } = this.props
+    const { string, className, language, showCode } = this.props
 
     if (!showCode) return <div />
 

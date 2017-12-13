@@ -18,7 +18,8 @@ class JuptyerRenderer extends Component {
     notebook: PropTypes.object.isRequired,
     defaultStyle: PropTypes.bool,
     loadMathjax: PropTypes.bool,
-    showCode: PropTypes.bool
+    showCode: PropTypes.bool,
+    showError: PropTypes.bool
   }
 
   componentDidMount() {
@@ -29,14 +30,19 @@ class JuptyerRenderer extends Component {
   }
 
   render() {
-    const { notebook, defaultStyle = true, showCode = true } = this.props
+    const {
+      notebook,
+      defaultStyle = true,
+      showCode = true,
+      showError = true
+    } = this.props
 
     let cls = defaultStyle ? 'jupyter-default' : 'jupyter'
     if (showCode) cls += ' showCode'
 
     return (
       <div className={cls}>
-        <Notebook raw={notebook} showCode={showCode} />
+        <Notebook raw={notebook} showCode={showCode} showError={showError} />
       </div>
     )
   }

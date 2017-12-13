@@ -16,11 +16,12 @@ const joinText = text => {
 class Output extends Component {
   static propTypes = {
     number: PropTypes.number,
-    showCode: PropTypes.bool
+    showCode: PropTypes.bool,
+    showError: PropTypes.bool
   }
 
   render() {
-    const { raw, number, showCode } = this.props
+    const { raw, number, showCode, showError } = this.props
     let output
 
     if (['display_data', 'execute_result', 'pyout'].includes(raw.output_type)) {
@@ -28,7 +29,7 @@ class Output extends Component {
     }
 
     if (['error', 'pyerr'].includes(raw.output_type)) {
-      output = <DisplayError raw={raw} number={number} />
+      output = <DisplayError showError={showError} raw={raw} number={number} />
     }
 
     if (raw.output_type === 'stream') {

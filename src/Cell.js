@@ -16,11 +16,12 @@ class Cell extends Component {
   static propTypes = {
     raw: PropTypes.object.isRequired,
     metadata: PropTypes.object.isRequired,
-    showCode: PropTypes.bool
+    showCode: PropTypes.bool,
+    showError: PropTypes.bool
   }
 
   render() {
-    const { raw, metadata, showCode } = this.props
+    const { raw, metadata, showCode, showError } = this.props
 
     if (raw.cell_type === 'code') {
       let number =
@@ -45,6 +46,7 @@ class Cell extends Component {
         return (
           <Output
             showCode={showCode}
+            showError={showError}
             raw={o}
             number={number}
             key={`output${i}`}
