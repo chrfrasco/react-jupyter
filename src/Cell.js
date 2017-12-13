@@ -13,24 +13,6 @@ const joinText = text => {
   }
 }
 
-// const coalesceStreams = outputs => {
-//   if (!outputs.length) { return outputs }
-//   var last = outputs[0]
-//   var new_outputs = [ last ]
-//   outputs.slice(1).forEach(function (o) {
-//     if (o.raw.output_type === "stream" &&
-//       last.raw.output_type === "stream" &&
-//       o.raw.stream === last.raw.stream) {
-//       last.raw.text = last.raw.text.concat(o.raw.text)
-//     } else {
-//       new_outputs.push(o)
-//       last = o
-//     }
-//   })
-//   return new_outputs
-// }
-
-
 class Cell extends Component {
   static propTypes = {
     raw: PropTypes.object.isRequired,
