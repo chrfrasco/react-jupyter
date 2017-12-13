@@ -31,8 +31,9 @@ class Code extends Component {
 
     if (!showCode) return <div />
 
+    const props = language ? { 'data-language': language } : {}
     return (
-      <pre className={className} data-language={language}>
+      <pre className={className} {...props}>
         <code
           ref={c => {
             this._elem = c
